@@ -133,7 +133,7 @@
   (interpolated_string_expression)
 ] @string.quoted.double.scala
 
-(interpolation "$" @punctuation.special)
+(interpolation "$" @punctuation.section.embedded.begin.scala)
 
 ;; keywords
 
