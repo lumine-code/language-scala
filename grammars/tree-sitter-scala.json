@@ -1,7 +1,7 @@
 {
   "name": "Scala",
   "scopeName": "source.scala",
-  "type": "modern-tree-sitter",
+  "type": "tree-sitter",
   "parser": "tree-sitter-scala",
   "injectionRegex": "^(scala)$",
   "fileTypes": ["scala", "sc", "sbt"],
