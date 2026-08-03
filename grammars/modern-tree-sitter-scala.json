@@ -1,0 +1,22 @@
+{
+  "name": "Scala",
+  "scopeName": "source.scala",
+  "type": "modern-tree-sitter",
+  "parser": "tree-sitter-scala",
+  "injectionRegex": "^(scala)$",
+  "fileTypes": ["scala", "sc", "sbt"],
+  "comments": {
+    "start": "/ "
+  },
+  "treeSitter": {
+    // Pin a tag or a full SHA, never a branch. Verify the ref is on the main
+    // line before trusting it — `gh api repos/OWNER/REPO/compare/<ref>...HEAD`
+    // reporting `diverged` or a nonzero `behind` means it is not.
+    "parserSource": "github:tree-sitter/tree-sitter-scala#v0.26.0",
+    "wasmBuildTool": "tree-sitter-cli#v0.26.11",
+    "grammar": "tree-sitter-scala/tree-sitter-scala.wasm",
+    "highlightsQuery": "tree-sitter-scala/highlights.scm",
+    "localsQuery": "tree-sitter-scala/locals.scm",
+    "tagsQuery": "tree-sitter-scala/tags.scm"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  ".source.scala": {
+    "language": {
+      "commentStart": "/ ",
+      "increaseIndentPattern": "\\{[^}\"']*$",
+      "decreaseIndentPattern": "^\\s*\\}"
+    },
+    "bracket-matcher": {
+      "autocompleteCharacters": ["()", "[]", "{}", "\"\"", "''"]
+    }
+  }
+}
