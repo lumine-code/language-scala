@@ -9,7 +9,7 @@ const path = require("path");
 
 describe("Scala Tree-sitter grammar", () => {
   beforeEach(async () => {
-    await atom.packages.activatePackage("language-scala");
+    await lumine.packages.activatePackage("language-scala");
   });
 
   it("tokenizes the fixture", async () => {
