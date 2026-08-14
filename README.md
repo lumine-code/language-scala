@@ -10,12 +10,12 @@ Scala language support.
 
 ## Installation
 
-To install `language-scala` search for _language-scala_ in the Install pane of the Lumine settings or run `lumine --install lumine-code/language-scala`.
+To install `language-scala` search for it in the Install pane of the Lumine settings, or run the command `lumine --install lumine-code/language-scala`.
 
 ## Services
 
-- **hyperlink.injection** (`^1.0.0`): consumed to highlight URLs inside Scala files as clickable links.
-- **todo.injection** (`^1.0.0`): consumed to highlight `TODO`-style markers inside comments.
+- `hyperlink.injection`: consumed to highlight URLs inside Scala files as clickable links.
+- `todo.injection`: consumed to highlight `TODO`-style markers inside comments.
 
 ## Contributing
 
