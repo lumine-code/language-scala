@@ -13,7 +13,7 @@
     // line before trusting it — `gh api repos/OWNER/REPO/compare/<ref>...HEAD`
     // reporting `diverged` or a nonzero `behind` means it is not.
     "parserSource": "github:tree-sitter/tree-sitter-scala#v0.26.0",
-    "wasmBuildTool": "tree-sitter-cli#v0.26.11",
+    "wasmBuildTool": "tree-sitter-cli#v0.26.13",
     "grammar": "tree-sitter-scala/tree-sitter-scala.wasm",
     "highlightsQuery": "tree-sitter-scala/highlights.scm",
     "localsQuery": "tree-sitter-scala/locals.scm",
