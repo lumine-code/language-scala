@@ -1,12 +1,12 @@
 {
   ".source.scala": {
-    "language": {
+    "bracket-matcher": {
+      "autocompleteCharacters": ["()", "[]", "{}", "\"\"", "''"]
+    },
+    "editor": {
       "commentStart": "/ ",
       "increaseIndentPattern": "\\{[^}\"']*$",
       "decreaseIndentPattern": "^\\s*\\}"
-    },
-    "bracket-matcher": {
-      "autocompleteCharacters": ["()", "[]", "{}", "\"\"", "''"]
     }
   }
 }
