@@ -3,7 +3,7 @@
   "scopeName": "source.scala",
   "type": "tree-sitter",
   "parser": "tree-sitter-scala",
-  "injectionRegex": "^(scala)$",
+  "injectionNames": ["scala"],
   "fileTypes": ["scala", "sc", "sbt"],
   "comments": {
     "start": "/ "
@@ -14,9 +14,9 @@
     // reporting `diverged` or a nonzero `behind` means it is not.
     "parserSource": "github:tree-sitter/tree-sitter-scala#v0.26.0",
     "wasmBuildTool": "tree-sitter-cli#v0.26.13",
-    "grammar": "tree-sitter-scala/tree-sitter-scala.wasm",
-    "highlightsQuery": "tree-sitter-scala/highlights.scm",
-    "localsQuery": "tree-sitter-scala/locals.scm",
-    "tagsQuery": "tree-sitter-scala/tags.scm"
+    "grammar": "scala.wasm",
+    "highlightsQuery": "scala-highlights.scm",
+    "localsQuery": "scala-locals.scm",
+    "tagsQuery": "scala-tags.scm"
   }
 }
