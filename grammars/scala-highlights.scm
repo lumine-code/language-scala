@@ -230,7 +230,8 @@
 
 "return" @keyword.control.return.scala
 
-(comment) @_IGNORE_.spell @comment.line.scala
+((comment) @_IGNORE_.spell @comment.line.scala
+  (#set! adjust.endBeforeFirstMatchOf "\\r?$"))
 (block_comment) @_IGNORE_.spell @comment.line.scala
 
 ;; `case` is a conditional keyword in case_block
