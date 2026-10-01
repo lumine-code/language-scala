@@ -17,6 +17,7 @@
     "grammar": "scala.wasm",
     "highlightsQuery": "scala-highlights.scm",
     "localsQuery": "scala-locals.scm",
-    "tagsQuery": "scala-tags.scm"
+    "tagsQuery": "scala-tags.scm",
+    "injectionsQuery": "scala-injections.scm"
   }
 }
