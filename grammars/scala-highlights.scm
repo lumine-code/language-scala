@@ -149,7 +149,7 @@
   "extends"
   "derives"
   "finally"
-;; `forSome` existential types not implemented yet
+  "forSome"
 ;; `macro` not implemented yet
   "object"
   "override"
@@ -161,11 +161,21 @@
   "with"
   "given"
   "using"
-  "end"
   "implicit"
-  "extension"
   "with"
 ] @keyword.control.scala
+
+(end_marker) @keyword.control.scala
+(extension_definition "extension" @keyword.control.scala)
+
+; XML literals have their own syntax nodes while embedded expressions stay Scala.
+(xml_name) @entity.name.tag.scala
+(xml_attribute key: (xml_name) @entity.other.attribute-name.scala)
+(xml_string) @string.quoted.double.scala
+(xml_text) @string.other.scala
+(xml_comment) @comment.block.scala
+(xml_cdata) @string.other.scala
+(xml_processing_instruction) @keyword.control.directive.scala
 
 [
   "abstract"
