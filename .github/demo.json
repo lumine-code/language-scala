@@ -1,0 +1,16 @@
+{
+  "title": "language-scala",
+  "description": "Scala syntax highlighting in the editor.",
+  "recordedOn": "2026-10-13",
+  "sourceRevision": "2988fb0c1a32ec7f763c8c5a8b957545d747d29d",
+  "mode": "normal",
+  "fontSettings": "default",
+  "images": [
+    {
+      "file": "demo.png",
+      "label": "Scala syntax highlighting at the default editor font size.",
+      "width": 1100,
+      "height": 360
+    }
+  ]
+}

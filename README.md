@@ -8,6 +8,8 @@ Scala language support.
 - **Syntax highlighting**: full tree-sitter grammar coverage for Scala files.
 - **Folding**: folds blocks from the parse tree rather than by indentation.
 
+![Scala syntax highlighting at the default editor font size.](.github/demo.png)
+
 ## Installation
 
 To install `language-scala` search for it in the Install pane of the Lumine settings, or run the command `lumine --install lumine-code/language-scala`.
