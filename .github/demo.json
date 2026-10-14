@@ -1,16 +1,61 @@
 {
   "title": "language-scala",
-  "description": "Scala syntax highlighting in the editor.",
-  "recordedOn": "2026-10-13",
-  "sourceRevision": "2988fb0c1a32ec7f763c8c5a8b957545d747d29d",
+  "description": "Scala syntax highlighting at the default editor font size.",
+  "recordedOn": "2026-10-14",
+  "sourceRevision": "3293253916dfdc4cc6149f244ac104d279d2b3bf",
+  "themeSourceRevision": "14a69683b0e3238e2bc128fbfae3866c1e4ee9c6",
   "mode": "normal",
   "fontSettings": "default",
+  "scenario": "demo.js",
+  "recipeHash": "499ff9ddf4d4375095a210146abce4b0fe823c28b9486cc8b0f14ef7602e04f2",
+  "environment": {
+    "platform": "win32",
+    "arch": "x64",
+    "electron": "44.7.0",
+    "chrome": "152.0.7977.130",
+    "devicePixelRatio": 1,
+    "locale": "en-GB",
+    "fontFamily": "Fira Code, Menlo, DejaVu Sans Mono, Consolas, monospace",
+    "fontSize": 14,
+    "themes": ["one-day-syntax", "one-day-ui"]
+  },
+  "viewport": { "width": 1100, "height": 360 },
+  "cornerRadius": 10,
+  "sources": {
+    "editor": {
+      "revision": "0362a9fac7d6e153a768c0381800d6f3eb06647a",
+      "dirty": true,
+      "workingTreeHash": "1d75658a8b7d55a69c806a3786c562863bb9d5c71cbf96b3084c6a78c0d648b4"
+    },
+    "package": {
+      "revision": "3293253916dfdc4cc6149f244ac104d279d2b3bf",
+      "dirty": true,
+      "workingTreeHash": "1e37a3ce9096bbca915071abfc3edc9c2d98d50a0c38490d7b8355d9fc5c806a"
+    },
+    "language-scala": {
+      "revision": "3293253916dfdc4cc6149f244ac104d279d2b3bf",
+      "dirty": true,
+      "workingTreeHash": "1e37a3ce9096bbca915071abfc3edc9c2d98d50a0c38490d7b8355d9fc5c806a"
+    },
+    "one-theme": {
+      "revision": "14a69683b0e3238e2bc128fbfae3866c1e4ee9c6",
+      "dirty": true,
+      "workingTreeHash": "50ec2f83a6347dd8113870992ec4eb2be4014f3d9e12213c2f51b543f1eca793"
+    }
+  },
+  "fixtures": [
+    {
+      "file": "example.scala",
+      "sha256": "19976045ef3cd9c5633b3efc0d24b798a69865d1bcfe1eb1a7178f27239332ac"
+    }
+  ],
   "images": [
     {
       "file": "demo.png",
       "label": "Scala syntax highlighting at the default editor font size.",
       "width": 1100,
-      "height": 360
+      "height": 360,
+      "sha256": "8ada904732203ea445b090c4eee05bd38a6c39773411224882441b523468a5b1"
     }
   ]
 }
