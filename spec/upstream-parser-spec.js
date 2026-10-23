@@ -1,4 +1,4 @@
-describe("Scala operator precedence and XML literals", () => {
+describe("Scala upstream grammar regressions", () => {
   let editor;
 
   beforeEach(async () => {
@@ -33,5 +33,23 @@ describe("Scala operator precedence and XML literals", () => {
     expect(editor.scopeDescriptorForBufferPosition([0, 17]).getScopesArray()).toContain(
       "entity.other.attribute-name.scala",
     );
+  });
+
+  it("keeps Scala 2 export identifiers distinct from Scala 3 export clauses", async () => {
+    editor.setText("package example.export\nobject A { export B.foo; val export = 1 }\n");
+    expect(await editor.whenGrammarSettled()).toBe(true);
+    const root = editor.getSyntaxNodeAtBufferPosition([0, 0], (node) => !node.parent);
+    expect(root.hasError).toBe(false);
+    expect(root.descendantsOfType("export_declaration").length).toBe(1);
+    const definition = root.descendantsOfType("val_definition")[0];
+    expect(definition.childForFieldName("pattern").text).toBe("export");
+  });
+
+  it("keeps dedented enumerators inside a braced for comprehension", async () => {
+    editor.setText("val result = for {\n    x <- xs\n  y <- ys\n} yield (x, y)\n");
+    expect(await editor.whenGrammarSettled()).toBe(true);
+    const root = editor.getSyntaxNodeAtBufferPosition([0, 0], (node) => !node.parent);
+    expect(root.hasError).toBe(false);
+    expect(root.descendantsOfType("enumerators")[0].descendantsOfType("enumerator").length).toBe(2);
   });
 });
