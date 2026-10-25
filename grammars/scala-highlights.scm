@@ -242,7 +242,7 @@
 
 ((comment) @_IGNORE_.spell @comment.line.scala
   (#set! adjust.endBeforeFirstMatchOf "\\r?$"))
-(block_comment) @_IGNORE_.spell @comment.line.scala
+(block_comment) @_IGNORE_.spell @comment.block.scala
 
 ;; `case` is a conditional keyword in case_block
 
