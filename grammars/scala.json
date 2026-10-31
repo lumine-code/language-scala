@@ -16,6 +16,7 @@
     "wasmBuildTool": "tree-sitter-cli#v0.27.1",
     "grammar": "scala.wasm",
     "highlightsQuery": "scala-highlights.scm",
+    "indentsQuery": "scala-indents.scm",
     "localsQuery": "scala-locals.scm",
     "tagsQuery": "scala-tags.scm",
     "injectionsQuery": "scala-injections.scm"
