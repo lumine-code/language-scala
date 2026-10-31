@@ -1,7 +1,8 @@
 {
   ".source.scala": {
     "bracket-matcher": {
-      "autocompleteCharacters": ["()", "[]", "{}", "\"\"", "''"]
+      "autocompleteCharacters": ["()", "[]", "{}", "\"\"", "''"],
+      "autocompleteDisabledCharacters": ["'"]
     },
     "editor": {
       "commentStart": "// ",
