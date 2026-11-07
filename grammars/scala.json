@@ -12,7 +12,7 @@
     // Pin a tag or a full SHA, never a branch. Verify the ref is on the main
     // line before trusting it — `gh api repos/OWNER/REPO/compare/<ref>...HEAD`
     // reporting `diverged` or a nonzero `behind` means it is not.
-    "parserSource": "github:tree-sitter/tree-sitter-scala#8c0b6d44bfd66bf7bc9a1fc15084ef17cef2f97e",
+    "parserSource": "github:tree-sitter/tree-sitter-scala#5de5a8221654cc548eabb72fea59b1765ba917fb",
     "wasmBuildTool": "tree-sitter-cli#v0.27.1",
     "grammar": "scala.wasm",
     "highlightsQuery": "scala-highlights.scm",
