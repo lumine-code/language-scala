@@ -3,6 +3,9 @@ Source: https://github.com/tree-sitter/tree-sitter-scala
 Commit: 5de5a8221654cc548eabb72fea59b1765ba917fb
 Ref: 5de5a8221654cc548eabb72fea59b1765ba917fb
 
+Parser source: github:tree-sitter/tree-sitter-scala#5de5a8221654cc548eabb72fea59b1765ba917fb
+Resolved commit: 5de5a8221654cc548eabb72fea59b1765ba917fb
+
 Original file: LICENSE
 
 The MIT License (MIT)
