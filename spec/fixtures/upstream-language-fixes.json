@@ -1,0 +1,19 @@
+[
+  {
+    "name": "type application belongs to the right infix operand",
+    "text": "a && b.asInstanceOf[T].length == 0\n",
+    "field": {
+      "type": "generic_function",
+      "field": "function",
+      "text": "b.asInstanceOf"
+    }
+  },
+  {
+    "name": "multiline braced typed tuple lambda wins over colon argument",
+    "text": "val c = xs.flatMap { a: (String, Json) =>\n  a._2\n}\n",
+    "types": {
+      "lambda_expression": 1,
+      "colon_argument": 0
+    }
+  }
+]
