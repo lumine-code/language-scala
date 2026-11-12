@@ -15,5 +15,33 @@
       "lambda_expression": 1,
       "colon_argument": 0
     }
+  },
+  {
+    "name": "next-line indented block continues a curried call",
+    "text": "object A {\n  val p = f(\n    { a => b })\n    { c => d }\n}\n",
+    "types": {
+      "call_expression": 2
+    },
+    "field": {
+      "type": "val_definition",
+      "field": "value",
+      "text": "f(\n    { a => b })\n    { c => d }"
+    }
+  },
+  {
+    "name": "same-indent next-line block remains a separate statement",
+    "text": "object A {\n  g(x)\n  {\n    y\n  }\n}\n",
+    "types": {
+      "call_expression": 1,
+      "block": 1
+    }
+  },
+  {
+    "name": "blank line keeps a deeper block separate from a call",
+    "text": "object A {\n  h(x)\n\n    { z }\n}\n",
+    "types": {
+      "call_expression": 1,
+      "block": 1
+    }
   }
 ]
