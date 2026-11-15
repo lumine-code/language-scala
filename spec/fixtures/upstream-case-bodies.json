@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Lines after `then` or `do` at the width of a case body end the branch (Scala 3 syntax)",
+    "text": "object P:\n  def f(t: Any, c: Boolean): Int = t match\n    case _: String =>\n      if c then\n      println(\"then\")\n      1\n    case _ =>\n      while c do\n      println(\"do\")\n      2\n\n",
+    "tree": "(compilation_unit (object_definition (identifier) (template_body (function_definition (identifier) (parameters (parameter (identifier) (type_identifier)) (parameter (identifier) (type_identifier))) (type_identifier) (match_expression (identifier) (indented_cases (case_clause (typed_pattern (wildcard) (type_identifier)) (if_expression (identifier) (call_expression (identifier) (arguments (string)))) (integer_literal)) (case_clause (wildcard) (while_expression (identifier) (call_expression (identifier) (arguments (string)))) (integer_literal))))))))"
+  },
+  {
+    "name": "A leading operator after a case body closes the nested match it is not deeper than (Scala 3 syntax)",
+    "text": "def f =\n  a\n  || b.match\n    case B =>\n      c.match\n        case C => d\n      || e\n    case _ =>\n      g\n  || h\n\n",
+    "tree": "(compilation_unit (function_definition (identifier) (indented_block (infix_expression (infix_expression (identifier) (operator_identifier) (match_expression (identifier) (indented_cases (case_clause (identifier) (infix_expression (match_expression (identifier) (indented_cases (case_clause (identifier) (identifier)))) (operator_identifier) (identifier))) (case_clause (wildcard) (identifier))))) (operator_identifier) (identifier)))))"
+  },
+  {
+    "name": "A leading operator the case region keeps continues the case body (Scala 3 syntax)",
+    "text": "def f =\n  a\n  || b.match\n      case B => c\n      case _ =>\n        d\n    || e\n\n",
+    "tree": "(compilation_unit (function_definition (identifier) (indented_block (infix_expression (identifier) (operator_identifier) (match_expression (identifier) (indented_cases (case_clause (identifier) (identifier)) (case_clause (wildcard) (infix_expression (identifier) (operator_identifier) (identifier)))))))))"
+  },
+  {
+    "name": "A case body continues after a line that closes its region (Scala 3 syntax)",
+    "text": "def f = x match\n  case a =>\n      b\n    c\n  case _ => d\n\n",
+    "tree": "(compilation_unit (function_definition (identifier) (match_expression (identifier) (indented_cases (case_clause (identifier) (identifier) (identifier)) (case_clause (wildcard) (identifier))))))"
+  }
+]
