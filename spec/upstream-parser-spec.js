@@ -17,6 +17,17 @@ describe("Scala upstream grammar regressions", () => {
     return root;
   }
 
+  it("keeps a continued parameter clause in the extension header", async () => {
+    const root = await parse("extension (x: A)\n    (using b: B = new B {})\n  def f = x\n");
+    const [extension] = root.descendantsOfType("extension_definition");
+    expect(extension.namedChildren.map((node) => node.type)).toEqual([
+      "parameters",
+      "parameters",
+      "function_definition",
+    ]);
+    expect(extension.namedChildren[1].text).toBe("(using b: B = new B {})");
+  });
+
   it("retains stars on expanded infix arguments in both Scala dialects", async () => {
     const root = await parse("foo(a ++ b*)\nbar(a ++ b: _*)\nfoo(xs: _ *)\n");
     expect(root.descendantsOfType("vararg").map((node) => node.text)).toEqual([
