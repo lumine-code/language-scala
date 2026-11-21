@@ -18,6 +18,9 @@ Resolved commit: c1e2b1adf4fd4a2db26ffe6956548864d66a282b
 Parser source: github:tree-sitter/tree-sitter-scala#58473f4bc411af940b47777d420e593f93b51df5
 Resolved commit: 58473f4bc411af940b47777d420e593f93b51df5
 
+Parser source: github:tree-sitter/tree-sitter-scala#0d4f5551b6768fa46de1714e69b42f69f8a19cde
+Resolved commit: 0d4f5551b6768fa46de1714e69b42f69f8a19cde
+
 Original file: LICENSE
 
 The MIT License (MIT)

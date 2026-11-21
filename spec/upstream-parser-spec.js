@@ -28,6 +28,18 @@ describe("Scala upstream grammar regressions", () => {
     expect(extension.namedChildren[1].text).toBe("(using b: B = new B {})");
   });
 
+  it("accepts a placeholder match in a polymorphic function body", async () => {
+    const root = await parse("val render = [T] => _ match { case value => value }\n");
+    const [lambda] = root.descendantsOfType("lambda_expression");
+    expect(lambda.childForFieldName("type_parameters").text).toBe("[T]");
+    const [match] = lambda.descendantsOfType("match_expression");
+    expect(match.childForFieldName("value").type).toBe("wildcard");
+
+    const typed = await parse("val identity = [T] => (value: T) => value\n");
+    const [typedLambda] = typed.descendantsOfType("lambda_expression");
+    expect(typedLambda.childForFieldName("parameters").text).toBe("(value: T)");
+  });
+
   it("retains stars on expanded infix arguments in both Scala dialects", async () => {
     const root = await parse("foo(a ++ b*)\nbar(a ++ b: _*)\nfoo(xs: _ *)\n");
     expect(root.descendantsOfType("vararg").map((node) => node.text)).toEqual([
